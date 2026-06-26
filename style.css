@@ -186,7 +186,7 @@ a {
 
 .hero h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 3.2rem;
+    font-size: clamp(2.4rem, 5vw, 3.2rem); /* Taille de police adaptative */
     margin-bottom: 10px;
 }
 
@@ -531,7 +531,11 @@ a {
 @media (max-width: 900px) {
     .hero-content {
         flex-direction: column-reverse;
-        align-items: flex-start;
+        text-align: center; /* Centrer le texte du hero sur mobile */
+    }
+
+    .hero-actions {
+        justify-content: center; /* Centrer les boutons */
     }
 
     .grid-2,
@@ -543,6 +547,13 @@ a {
 
     .skills-grid {
         gap: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-image {
+        width: 250px; /* Réduire la taille de l'image sur les très petits écrans */
+        height: 250px;
     }
 }
 
@@ -569,10 +580,6 @@ a {
 }
 
 @media (max-width: 600px) {
-    .hero h1 {
-        font-size: 2.4rem;
-    }
-
     .hero-content {
         padding-top: 20px;
     }

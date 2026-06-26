@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:5500/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="http://127.0.0.1:5500/inscription">
+        <fieldset>
+            <label for="name">Nom complet:</label> <br>
+            <input type="text" id="name" name="name" placeholder="Monier Basile" required="">
+            <br>
+            <label for="email">adresse email:</label> <br>
+            <input type="email" name="email" id="email" placeholder="monierb@example.com" required=""> <br>
+            <label for="password"> Mot de passe:</label> <br>
+            <input type="password" id="password" name="password" placeholder="******************"><br>
+            <label for="birthday">date de naissance:</label> <br>
+            <input type="date" id="birthday" name="birthday"> <br>
+            <label for="tel">Téléphone: </label> <br>
+            <input type="tel" id="tel" name="tel" placeholder="+33 X XX...">
+            <label for="etudes">Niveu d'études:</label> <br>
+            <select>
+                <option value="">Selectionner un niveau d'étude.</option>
+                <option value="bac">bac</option>
+                <option value="bac+2">bac+2</option>
+                <option value="bac+3">bac+3</option>
+                
+            </select>
+
+            <fieldset>
+                <legend>Comment as-tu connu l'evenement</legend>
+                <input type="radio" id="amis" name="amis">
+                <label for="amis">chez un ami.</label>
+                <input type="radio" id="TV" name="TV">
+                <label for="TV">à la Télé.</label>
+                <input type="radio" id="pub" name="pub">
+                <label for="pub">Sur un panneau publicitaire.</label>
+            </fieldset>
+            <label for="decription">Pourquoi t'inscris-tu? </label> <br>
+            <textarea name="description" id="description">ecrivez en quelques lignes...</textarea>
+
+        </fieldset>
+    </form>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>

@@ -2,345 +2,355 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Portfolio – Daniel Bokingo Botay</title>
+    <title>Portfolio – Daniel Bokingo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
-
-<canvas id="bg-canvas"></canvas>
-
-<header class="main-header">
-    <div class="logo">DBB</div>
-    <nav class="nav">
-        <a href="#hero">Accueil</a>
-        <a href="#skills">Compétences</a>
-        <a href="#projects">Projets</a>
-        <a href="#about">À propos</a>
-        <a href="#contact">Contact</a>
-        <a href="#cv" class="btn-cv-header">CV</a>
-    </nav>
-</header>
-
-<main>
-
-    <!-- HERO -->
-    <section id="hero" class="section hero">
-        <div class="hero-content">
-            <h1>Daniel BOKINGO BOTAY</h1>
-            <img src="WhatsApp_Image_2026-04-27_at_11.12.03-removebg-preview.png" alt="photo" class="photo">
-            <h2>Étudiant en Informatique · Développeur Web, Python, java, SQL & Électronicien Industriel</h2>
-            <p>
-                Bonjour! Bienvenue sur mon portfolio. moi c'est Daniel. Je suis étudiant en première année bachelor à l'ECOLE-IT. j'aime apprendre de nouvelles technologies, comme des langages de programmation et des outils de l'it.
-            </p>
-            <div class="hero-buttons">
-                <a href="#projects" class="btn-primary">Voir mes projets</a>
-                <a href="#cv" class="btn-secondary">Voir mon CV</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- COMPÉTENCES -->
-    <section id="skills" class="section">
-        <h2 class="section-title">Compétences</h2>
-
-        <div class="skills-grid">
-            <div class="card reveal">
-                <h3>Développement</h3>
-                <ul>
-                    <li>Python (Flask, Tkinter, Kivy)</li>
-                    <li>HTML / CSS</li>
-                    <li>Développement full‑stack</li>
-                    <li>Applications desktop</li>
-                    <li>Gestion de bases de données</li>
-                </ul>
-            </div>
-
-            <div class="card reveal">
-                <h3>Électronique</h3>
-                <ul>
-                    <li>Arduino</li>
-                    <li>ESP32</li>
-                    <li>Capteurs & actionneurs</li>
-                    <li>Prototypage électronique</li>
-                </ul>
-            </div>
-
-            <div class="card reveal">
-                <h3>Autres</h3>
-                <ul>
-                    <li>Résolution de problèmes</li>
-                    <li>Conception de projets techniques</li>
-                    <li>Assiduité au travail et à l'apprentissage.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- PROJETS -->
-    <section id="projects" class="section">
-        <h2 class="section-title">Projets</h2>
-
-        <h3 class="subsection-title">Projets de Programmation</h3>
-        <div class="projects-grid">
-            <div  class="card reveal">
-                <h4>Application type Kahoot</h4>
-                <p>Jeu interactif multi‑joueurs avec interface web, gestion des questions, scores et sessions.</p> <br>
-                <a href= "https://venerable-conkies-fe6d2b.netlify.app/" class="social-link">www.Equiz.com</a>
-                <p class="tech">Python · Flask · Web</p>
-            </div>
-
-            <div class="card reveal">
-                <h4>Site vitrine pour entreprise (Congo)</h4>
-                <p>Site professionnel full‑stack présentant les services et permettant la prise de contact.</p> <br>
-                <a href= "https://congolese-full-stack-it-ydg0.onrender.com/" class="social-link">www.Congolesfullstackit.com</a>
-                <p class="tech">Full‑stack · HTML/CSS </p>
-            </div>
-
-            
-
-            <div class="card reveal">
-                <h4>Application de gestion de stock</h4>
-                <p>Gestion des articles, suivi des quantités et alertes de rupture pour un supermarché.</p> <br> <br> <br>
-                <p>
-Voici comment utiliser MarketLog : <br>
-Téléchargez l'application de type exécutable ainsi que l'image de background via les liens ci‑dessous. <br>
-Ensuite, placez les deux éléments dans un seul dossier. <br>
-Au lancement de l'application, un fichier de type .csv sera créé automatiquement. <br>
-Celui‑ci vous servira alors de base de données : vous y retrouverez tous les produits enregistrés dans l'application. <br>
-Merci de ne pas le supprimer.
-</p>
-                <a href="MarketLog.exe" download target="_blank" class="social-link">Télecharger MarketLog.exe</a>
-                <a href="Background.jpg" download target="_blank" class="social-link">Télécharger le Background</a>
-                
-                <p class="tech">Python · Gestion de données</p>
-            </div>
-            <div class="card reveal">
-                <h4>Portfolio</h4>
-                <p>Un portfolio est un site web qui met en valeur ton travail, tes compétences et ta personnalité,
-                    afin que des recruteurs, des écoles ou des clients puissent comprendre rapidement ce que tu sais faire.
-                </p> <br>
-                <a href="https://winnieportfolio.onrender.com/" class="social-link">www.Winniekayombo.com</a>
-                <p class="tech">HTML/CSS · JAVASCRIPT</p>
-            </div>
-            
-        </div>
-
-        <h3 class="subsection-title">Projets Électroniques</h3>
-        <div class="projects-grid">
-            <div class="card reveal">
-                <h4>Barrière télécommandée</h4>
-                <p>Version sans programmation, puis version améliorée avec Arduino.</p>
-                <p class="tech">Électronique · Arduino</p>
-            </div>
-
-            <div class="card reveal">
-                <h4>Alarme anti‑incendie</h4>
-                <p>Système de détection de fumée avec alarme sonore, version Arduino disponible.</p>
-                <p class="tech">Capteurs · Sécurité</p>
-            </div>
-
-            
-
-            <div class="card reveal">
-                <h4>Lumière à détection sonore</h4>
-                <p>Activation par claquement de doigts, version électronique et version Arduino.</p>
-                <p class="tech">Audio · Détection</p>
-            </div>
-
-            
-        </div>
-    </section>
-
-    <!-- À PROPOS -->
-    <section id="about" class="section">
-        <h2 class="section-title">À propos de moi</h2>
-        <div class="about-content reveal">
-            <p>
-                Je m’appelle <strong>Daniel BOKINGO Botay</strong>, étudiant en informatique et diplômé d'état (Baccalauréat) en
-                électronique industrielle.
-            </p>
-            <p>
-                Depuis mes 17 ans, je me passionne pour la programmation et la création de systèmes électroniques.
-                J’aime concevoir des projets complets : logiciels, sites web, prototypes électroniques, systèmes embarqués.
-            </p>
-            <p>
-                Mon objectif est de devenir un développeur polyvalent capable de créer des solutions modernes,
-                fiables et utiles, en combinant mes compétences en code et en électronique.
-            </p>
-        </div>
-    </section>
-
-    <!-- CV -->
-    <section id="cv" class="section">
-        <h2 class="section-title">Mon CV</h2>
-        <div class="cv-content reveal">
-            <p>Vous pouvez consulter ou télécharger mon CV ci‑dessous.</p>
-            
-        </div>
-        <a href="cv.pdf" download target="_blank">
-         <button class="btn-primary" target="_blank">Télécharger mon CV</button>
-        </a>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section">
-        <h2 class="section-title">Contact</h2>
-        <div class="contact-content reveal">
-            <p>Basé à Valenciennes, France.</p>
-            <p>Disponible pour projets, collaborations et opportunités de stage.</p>
-            <ul>
-                <li>Email : <span href= "" class="social-link">bokingodaniel4@gmail.com</span></li>
-                <li>Téléphone : <a href="tel: +33759451864" class="social-link">+33759451864</a></li>
-                <li>GitHub : <a href="https://github.com/BonkingoDaniel006" target="_blank" class="social-link">github.com/BonkingoDaniel006</a></li>
+    <header class="hero" id="top">
+        <nav class="navbar">
+            <div class="logo">D<span>B</span></div>
+            <ul class="nav-links">
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#skills">Compétences</a></li>
+                <li><a href="#experience">Expériences</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
+            <button class="nav-toggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+
+        <div class="hero-content">
+            <div class="hero-image">
+                <img src="WhatsApp_Image_2026-04-27_at_11.12.03-removebg-preview.png" alt="Photo de Daniel Bokingo">
+            </div>
+            <div class="hero-text hidden">
+                <p class="hero-tagline">Étudiant en Informatique</p>
+                <p class="hero-tagline">A l'Ecole-it, Campus de Valenciennes</p>
+                <h1 >Daniel <span>Bokingo</span></h1>
+                <p class="hero-subtitle">
+                    Bonjour! Bienvenue sur mon portfolio. moi c'est Daniel. 
+                    Je suis étudiant en première année bachelor à l'ECOLE-IT. 
+                    j'aime apprendre de nouvelles technologies, 
+                    comme des langages de programmation et des outils de l'it.
+                </p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn primary">Me contacter</a>
+                    <a href="#skills" class="btn ghost">Voir mes compétences</a>
+                </div>
+            </div>
         </div>
-    </section>
+    </header>
 
-</main>
+    <main>
+        <!-- À propos -->
+        <section id="about" class="section section-light">
+            <div class="container hidden">
+                <h2 class="section-title">À propos de moi</h2>
+                <div class="grid-2">
+                    <div >
+                        <p>
+    Je m’appelle <strong>Daniel Bokingo</strong>, je suis actuellement étudiant en
+    <strong>Informatique ( Bachelor Administrateur système DevOps)</strong> à <strong>l’École-it de Valenciennes</strong>. 
+    Passionné par l'architecture backend et la sécurité, j’aime concevoir et développer des <strong>projets personnels</strong> stimulants, qui me permettent de mettre en pratique mes compétences et de repousser constamment mes limites techniques.
+                        </p>
+                        <br>
+                        <p>
+                            J’aime analyser les besoins, lire, écouter de la musique, Jouer au Basket-ball. Mon ambition est de travailler
+                            dans une entreprise moderne, orientée vers le bien-être et qui me permettra d'exploiter l'integralité de mes compétences.
+                        </p>
+                        
+                    </div>
+                    <div class="about-highlight ">
+                           <h3>Mon objectif</h3>
+                        <p>
+                            Evoluer vers un poste de <strong>Développeur Backend</strong> ou <strong>Administrateur système DevOps</strong> dans une entreprise innovante, où je pourrai contribuer à des projets passionnants et continuer à développer mes compétences techniques.
+                        </p>
+                        <ul class="tags">
+                            <li>Développeur Backend</li>
+                            <li>Administrateur système DevOps</li>
+                            <li>Securité</li>
+                            <li>Architecture Backend</li>
+                            <li>IoT</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<footer class="main-footer">
-    <p>© <span id="year"></span> Daniel Bokingo Botay · Tous droits réservés.</p>
-</footer>
+        <!-- Compétences -->
+        <section id="skills" class="section section-dark">
+            <div class="container hidden">
+                <h2 class="section-title section-title-center">Compétences</h2>
+                <div class="skills-grid">
+                    <div class="skill-card ">
+                        <h3>Developpement Frontend</h3>
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card ">
+                        <h3>Developpement Backend</h3>
+                        <ul>
+                            <li>Python (Django, Flask)</li>
+                            <li>PHP</li>
+                            <li>Programmation orientée objet</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card ">
+                        <h3>Application Desktop & jeux 2D</h3>
+                        <ul>
+                            <li>Kivy</li>
+                            <li>Tkinter</li>
+                            <li>Pygame</li>
+                            <li>Turtle</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card ">
+                        <h3>Bases de données</h3>
+                        <ul>
+                            <li>MySQL</li>
+                            <li>PostgreSQL</li>
+                            <li>MongoDB</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card ">
+                        <h3>Administration système & DevOps | Iot & systemes embarqués</h3>
+                        <ul>
+                            <li>Linux (Ubuntu, Debian)</li>
+                            <li>Git & GitHub</li>
+                            <li>XAMPP, WAMP, MAMP & myPhpAdmin</li>
+                            <li>Administration système</li>
+                            <li>Promox VE</li>
+                            <li>VMware</li>
+                            <li>langage C++</li>
+                            <li>Prototypage avec Arduino & ESP32</li>
+                        </ul>
+                    </div>
 
-<script>
-    /* FOND ANIMÉ */
-    const canvas = document.getElementById("bg-canvas");
-    const ctx = canvas.getContext("2d");
+                    
 
-    let particles = [];
-    const PARTICLE_COUNT = 80;
+                </div>
+            </div>
+        </section>
 
-    function resizeCanvas() {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-    }
-    resizeCanvas();
-    window.addEventListener("resize", resizeCanvas);
+        <!-- Parcours & expériences -->
+        <section id="experience" class="section section-light">
+            <div class="container hidden">
+                <h2 class="section-title">Parcours & expériences</h2>
+                <div class="timeline">
+                    <div class="timeline-item ">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>Baccalauréat en Electronique Industrielle</h3>
+                            <p class="timeline-sub">Septembre 2021 – Juillet 2025 · Institut Technique Salama-Don Bosco - Lubumbashi, RDC</p>
+                            <p>
+                                <li>Cours en Electricité</li>
+                                <li>Cours en Electronique</li>
+                                <li>Cours en Circuits Logique & Automation</li>
+                                <li>Cours en Schema Electrique</li>
+                                <li>Cours en Schema Electronique</li>
+                                <li>TP en Electricité des Batiments</li>
+                                <li>Tp en Electronique</li>
+                            </p>
+                        </div>
+                    </div>
 
-    function createParticles() {
-        particles = [];
-        for (let i = 0; i < PARTICLE_COUNT; i++) {
-            particles.push({
-                x: Math.random() * canvas.width,
-                y: Math.random() * canvas.height,
-                radius: Math.random() * 2 + 0.5,
-                speedX: (Math.random() - 0.5) * 0.3,
-                speedY: (Math.random() - 0.5) * 0.3,
-                alpha: Math.random() * 0.6 + 0.2
-            });
-        }
-    }
-    createParticles();
+                    <div class="timeline-item ">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>Technicien de Maintenance - Stage</h3>
+                            <p class="timeline-sub">Fevrier 2025 – Avril 2025 · Societé Nationale des Chemins de Fer du Congo – Lubumbashi, RDC</p>
+                            <p>
+                                <li>Maintenance des équipements électriques</li>
+                                <li>Maintenance des équipements électroniques</li>
+                                <li>Rédaction d'un rapport de stage</li>
+                            </p>
+                        </div>
+                    </div>
 
-    function drawParticles() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
+                    <div class="timeline-item ">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>Bachelor en Administration système DevOps</h3>
+                            <p class="timeline-sub">Janvier 2026 - Aujourd'hui · Ecole-it, Valenciennes, France</p>
+                            <p>
+                                <li>Python</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                                <li>PHP</li>
+                                <li>Programmation Orientée Objet</li>
+                                <li>MySQL</li>
+                                <li>Git</li>
+                                <li>Linux</li>
+                                <li>Windows</li>
+                                <li>Administration système(Windows & Linux)</li>
 
-        ctx.fillStyle = "rgba(5, 5, 9, 0.6)";
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
+                            </p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
 
-        particles.forEach(p => {
-            p.x += p.speedX;
-            p.y += p.speedY;
+        <section id="projects" class="section section-dark">
+            <div class="container hidden">
+                <h2 class="section-title section-title-center">Projets</h2>
+                <div class="project-nav">
+                    <button class="btn active">Tous</button>
+                    <button class="btn">Web & Desktop</button>
+                    <button class="btn">IoT</button>
+                </div>
 
-            if (p.x < 0) p.x = canvas.width;
-            if (p.x > canvas.width) p.x = 0;
-            if (p.y < 0) p.y = canvas.height;
-            if (p.y > canvas.height) p.y = 0;
-
-            ctx.beginPath();
-            const gradient = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.radius);
-            gradient.addColorStop(0, `rgba(108, 92, 231, ${p.alpha})`);
-            gradient.addColorStop(1, `rgba(0, 206, 201, 0)`);
-            ctx.fillStyle = gradient;
-            ctx.fill();
-        });
-    }
-
-    function animateCanvas() {
-        drawParticles();
-        requestAnimationFrame(animateCanvas);
-    }
-    animateCanvas();
-
-    /* DÉTECTION SCROLL POUR ANIMATIONS */
-    const revealElements = document.querySelectorAll(".reveal");
-
-    function revealOnScroll() {
-        revealElements.forEach((element) => {
-            const rect = element.getBoundingClientRect();
-            const isVisible = rect.top < window.innerHeight - 50 && rect.bottom > 0;
-
-            if (isVisible) {
-                element.classList.add("visible");
-            } else {
-                element.classList.remove("visible");
-            }
-        });
-    }
-
-    window.addEventListener("scroll", revealOnScroll);
-    revealOnScroll();
-
-    /* EFFET SOURIS SUR LES CARTES */
-    const cards = document.querySelectorAll(".card");
-
-    cards.forEach((card) => {
-        card.addEventListener("mousemove", (e) => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            const xPercent = (x / rect.width) * 100;
-            const yPercent = (y / rect.height) * 100;
-
-            card.style.setProperty("--mouse-x", `${xPercent}%`);
-            card.style.setProperty("--mouse-y", `${yPercent}%`);
-        });
-
-        card.addEventListener("mouseleave", () => {
-            card.style.setProperty("--mouse-x", "50%");
-            card.style.setProperty("--mouse-y", "50%");
-        });
-    });
-
-    /* PARALLAX EFFECT */
-    window.addEventListener("scroll", () => {
-        const parallaxElements = document.querySelectorAll(".hero-content");
-        parallaxElements.forEach((element) => {
-            const scrollPosition = window.scrollY;
-            element.style.transform = `translateY(${scrollPosition * 0.5}px)`;
-        });
-    });
-
-    /* ANNÉE FOOTER */
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    /* SMOOTH SCROLL CLICKS */
-    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", (e) => {
-            e.preventDefault();
-            const target = document.querySelector(anchor.getAttribute("href"));
-            if (target) {
-                target.scrollIntoView({ behavior: "smooth", block: "start" });
-            }
-        });
-    });
-
-</script>
-
-
-
-
-
-
-
-
-
+                <div class="projects-grid">
+                    <div class="project-card " data-category="web">
+                        <h3>Portfolio Personnel</h3>
+                        <p>Création d'un portfolio personnel pour présenter mes compétences, expériences et projets.</p>
+                        <a href="#" class="btn ghost">Voir le projet</a>
+                    </div>
+                    
+                    <div class="project-card " data-category="desktop">
+                        <h3>MarketLog</h3>
+                        <p>MarketLog est une application de gestion de stock simple et efficace. 
+                            Elle permet de vendre, réapprovisionner, consulter les prix et visualiser 
+                            le stock en temps réel. Les données sont enregistrées dans un fichier CSV, 
+                            assurant une base fiable et persistante entre chaque utilisation.</p>
+                        <a href="#" class="btn ghost">Voir le projet</a>
+                    </div>
+                    <div class="project-card " data-category="desktop">
+                        <h3>Jeu du serpent en python</h3>
+                        <p>Création d'un jeu simple en 2D utilisant Pygame & Turtle, mettant en 
+                            pratique les concepts de programmation Pygame & Turtle.</p>
+                        <a href="#" class="btn ghost">Voir le projet</a>
+                    </div>
+                    <div class="project-card " data-category="web">
+                        <h3>E-quiz</h3>
+                        <p>Application type Kahoot, quiz interactif multi‑joueurs avec interface web, 
+                            gestion des questions, scores et sessions.
+                        </p>
+                        <a href="#" class="btn ghost">Voir le projet</a>
+                    </div>
+                    <div class="project-card " data-category="web">
+                        <h3>Bistrot Le Resto</h3>
+                        <p>Bistrot Le Rétro est un site web gastronomique présentant un restaurant lillois 
+                            fusionnant cuisine traditionnelle et saveurs contemporaines.</p>
+                        <a href="#" class="btn ghost">Voir le projet</a>
+                    </div>
+                    <div class="project-card " data-category="web">
+                        <h3>Projet - Chichats</h3>
+                        <p>Chichats - Application web de réservation pour un bar à chicha & chats à paris. 
+                            Les clients découvrent les services et réservent leurs tables, 
+                            les gérants gèrent toutes les réservations via un dashboard intuitif. 
+                            Créée avec PHP, MySQL, CSS et JavaScript pour une gestion complète des 
+                            réservations (CRUD). Interface moderne avec recherche et modales pour 
+                            éditer rapidement. Projet professionnel démontrant la conception d'une 
+                            plateforme fonctionnelle de bout en bout. </p>
+                        <a href="#" class="btn ghost">Voir le projet</a>
+                    </div>
+                    <div class="project-card " data-category="web">
+                        <h3>Projet - Web_blog</h3>
+                        <p>Web_blog - Application web de blog personnel. Les utilisateurs peuvent créer, 
+                            modifier et publier des articles. Les administrateurs peuvent gérer les utilisateurs 
+                            et les contenus via un tableau de bord. Créée avec PHP, MySQL, CSS et JavaScript pour 
+                            une expérience utilisateur fluide.</p>
+                        <a href="#" class="btn ghost">Voir le projet</a>
+                    </div>
+                    <div class="project-card " data-category="iot">
+                        <h3>Prototypage RFID</h3>
+                        <p>Projet de prototypage avec un lecteur RFID et une carte Arduino UNO pour le contrôle d'accès.</p>
+                        <a href="#" class="btn ghost">Voir le projet</a>
+                    </div>
+                    <div class="project-card " data-category="iot">
+                        <h3>Lecteur d'empreinte digitale</h3>
+                        <p>Intégration d'un capteur d'empreintes digitales AS608 pour un système de sécurité biométrique.</p>
+                        <a href="#" class="btn ghost">Voir le projet</a>
+                    </div>
+                    <div class="project-card " data-category="iot">
+                        <h3>Radar à ultrasons</h3>
+                        <p>Création d'un radar avec capteur à ultrasons et servomoteur, piloté par un ESP32 avec une interface web pour la visualisation.</p>
+                        <a href="#" class="btn ghost">Voir le projet</a>
+                    </div>
 
 
 
+                </div>
+            </div>
 
+        
+        
 
+        <!-- Centres d’intérêt & qualités -->
+        <section class="section section-light">
+            <div class="container hidden">
+                <div class="grid-2">
+                    <div>
+                        <h2 class="section-title">Soft-skills</h2>
+                        <ul class="pill-list">
+                            <li>Résolution de problèmes</li>
+                            <li>Travail d'équipe</li>
+                            <li>Communication</li>
+                            <li>Adaptabilité</li>
+                            <li>Autonomie</li>
+                            <li>Curiosité technique</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="section-title">Centres d’intérêt</h2>
+                        <ul class="pill-list">
+                            <li>Musique</li>
+                            <li>Basket-ball</li>
+                            <li>Voitures</li>
+    
+                            
+                        </ul>
+                    </div>
+</div>
+            </div>
+        </section>
 
+        <!-- Contact -->
+        <section id="contact" class="section section-contact">
+            <div class="container hidden">
+                <h2 class="section-title section-title-center">Contact</h2>
+                <p class="contact-intro">
+                    Intéressé(e) par mon profil pour un stage, un Alternance ou une collaboration sur un projet?
+                    N’hésitez pas à me contacter.
+                </p>
+                <div class="contact-grid">
+                    <form class="contact-form" onsubmit="return false;">
+                        <div class="contact-info">
+                          <p><i class="fa-solid fa-location-dot"></i><strong>Localisation :</strong> Valenciennes, France</p>
+                            <p><i class="fa-solid fa-envelope"></i><strong>Email :</strong> <a href="mailto:bokingodaniel4@gmail.com">bokingodaniel4@gmail.com</a></p>
+                            <p><i class="fa-brands fa-linkedin"></i><strong>LinkedIn :</strong> <a href="https://www.linkedin.com/in/daniel-bokingo-024415357/">
+                                danielbokingo.linkedln</a></p>
+                            <p><i class="fa-solid fa-phone"></i><strong>Téléphone :</strong> <a href="tel:+33759451864">+33 7 59 45 18 64</a></p>
+                        </div>
+                        
+                        
+                    
+                    </form>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 – Daniel Bokingo – Tous droits réservés</p>
+
+    </footer>
+
+    <a href="#top" class="back-to-top" aria-label="Retour en haut"><i class="fa-solid fa-arrow-up"></i></a>
+
+    <script src="script.js"></script>
+</body>
+</html>

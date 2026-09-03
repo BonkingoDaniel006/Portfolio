@@ -308,38 +308,50 @@ a {
 
 /* Skills */
 
-.skills-grid {
+.skills-grid-new {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 24px;
+    margin-top: 30px;
 }
 
-.skill-card {
-    background: #181818;
+.skill-item {
+    background: linear-gradient(145deg, #1a1a1a, #111111);
     border-radius: var(--radius);
-    padding: 18px 18px 16px;
-    border: 1px solid rgba(255,255,255,0.05);
-    transition: transform 0.3s ease, border-color 0.3s ease;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    text-align: center;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
-.skill-card h3 {
-    font-size: 1.05rem;
-    margin-bottom: 10px;
-    color: var(--blue);
+.skill-item i {
+    font-size: 3rem; /* Taille des icônes */
+    color: var(--light);
+    transition: color 0.3s ease;
 }
 
-.skill-card ul {
-    list-style: none;
+.skill-item span {
     font-size: 0.9rem;
+    color: var(--muted);
+    transition: color 0.3s ease;
 }
 
-.skill-card li {
-    margin-bottom: 6px;
-}
-
-.skill-card:hover {
+.skill-item:hover {
     transform: translateY(-5px);
-    border-color: rgba(34, 143, 201, 0.5);
+    border-color: var(--blue);
+    box-shadow: 0 10px 30px rgba(34, 143, 201, 0.2);
+}
+
+.skill-item:hover i,
+.skill-item:hover span {
+    color: var(--blue);
 }
 
 /* Timeline */
@@ -389,34 +401,77 @@ a {
 
 /* Projects */
 
+.project-nav {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.project-nav .btn {
+    background: transparent;
+    color: var(--muted);
+    border: 1px solid rgba(255,255,255,0.2);
+    margin: 0 5px;
+}
+
+.project-nav .btn.active {
+    background: var(--blue);
+    color: var(--white);
+    border-color: var(--blue);
+}
+
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
     margin-top: 20px;
 }
 
 .project-card {
-    background: #181818;
+    position: relative;
     border-radius: var(--radius);
-    padding: 18px 18px 16px;
-    border: 1px solid rgba(255,255,255,0.06);
-    transition: transform 0.3s ease, border-color 0.3s ease;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    background: #111;
 }
 
-.project-card h3 {
-    margin-bottom: 6px;
+.project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
 }
 
-.project-tag {
-    font-size: 0.8rem;
-    color: var(--blue);
-    margin-bottom: 8px;
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.1));
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
-    border-color: rgba(34, 143, 201, 0.5);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.05);
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project-overlay h3 {
+    margin-bottom: 12px;
 }
 
 /* Pills */
@@ -540,14 +595,20 @@ a {
     }
 
     .grid-2,
-    .skills-grid,
-    .projects-grid,
     .contact-grid {
         grid-template-columns: 1fr;
     }
 
-    .skills-grid {
-        gap: 16px;
+    .skills-grid-new {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+
+    .modal-body {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-content {
+        padding: 20px;
     }
 }
 
@@ -611,3 +672,130 @@ a {
 .back-to-top.visible {
     opacity: 1;
 }
+
+
+
+/* Modal */
+.modal {
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0s 0.3s;
+}
+
+.modal.visible {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease;
+}
+
+.modal-content {
+    background: var(--dark);
+    padding: 25px;
+    border-radius: var(--radius);
+    width: min(96%, 1200px);
+    max-height: 94vh;
+    overflow-y: auto;
+    position: relative;
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+}
+
+.modal.visible .modal-content {
+    transform: scale(1);
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: var(--muted);
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.close-modal:hover {
+    color: var(--white);
+}
+
+.modal-body {
+    display: grid;
+    grid-template-columns: 1.35fr 0.85fr;
+    gap: 25px;
+    margin-top: 15px;
+}
+
+.modal-gallery {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius);
+    min-height: clamp(320px, 58vh, 680px);
+    background: #050505;
+}
+
+.gallery-slider {
+    display: flex;
+    height: 100%;
+    transition: transform 0.4s ease-in-out;
+}
+
+.gallery-item {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+}
+
+.gallery-item img,
+.gallery-item iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border: none;
+}
+
+.gallery-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 18px;
+    transition: background-color 0.2s;
+}
+.gallery-nav:hover { background-color: rgba(0, 0, 0, 0.8); }
+.gallery-nav.prev { left: 10px; }
+.gallery-nav.next { right: 10px; }
+
+/* Responsive */
+
+@media (max-width: 900px) {
+
+
+
+    
+
+    .modal-body {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-content {
+        padding: 20px;
+    }
+}
+
+

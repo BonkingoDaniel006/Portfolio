@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -89,56 +90,29 @@
         <section id="skills" class="section section-dark">
             <div class="container hidden">
                 <h2 class="section-title section-title-center">Compétences</h2>
-                <div class="skills-grid">
-                    <div class="skill-card ">
-                        <h3>Developpement Frontend</h3>
-                        <ul>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>JavaScript</li>
-                        </ul>
-                    </div>
-                    <div class="skill-card ">
-                        <h3>Developpement Backend</h3>
-                        <ul>
-                            <li>Python (Django, Flask)</li>
-                            <li>PHP</li>
-                            <li>Programmation orientée objet</li>
-                        </ul>
-                    </div>
-                    <div class="skill-card ">
-                        <h3>Application Desktop & jeux 2D</h3>
-                        <ul>
-                            <li>Kivy</li>
-                            <li>Tkinter</li>
-                            <li>Pygame</li>
-                            <li>Turtle</li>
-                        </ul>
-                    </div>
-                    <div class="skill-card ">
-                        <h3>Bases de données</h3>
-                        <ul>
-                            <li>MySQL</li>
-                            <li>PostgreSQL</li>
-
-                        </ul>
-                    </div>
-                    <div class="skill-card ">
-                        <h3>Administration système & DevOps | Iot & systemes embarqués</h3>
-                        <ul>
-                            <li>Linux (Ubuntu, Debian)</li>
-                            <li>Git & GitHub</li>
-                            <li>XAMPP, WAMP, MAMP & phpMyAdmin</li>
-                            <li>Administration système</li>
-                            <li>Promox VE</li>
-                            <li>VMware</li>
-                            <li>langage C++</li>
-                            <li>Prototypage avec Arduino & ESP32</li>
-                        </ul>
-                    </div>
-
-                    
-
+                <div class="skills-grid-new">
+                    <div class="skill-item"><i class="devicon-html5-plain"></i><span>HTML5</span></div>
+                    <div class="skill-item"><i class="devicon-css3-plain"></i><span>CSS3</span></div>
+                    <div class="skill-item"><i class="devicon-javascript-plain"></i><span>JavaScript</span></div>
+                    <div class="skill-item"><i class="devicon-python-plain"></i><span>Python</span></div>
+                    <div class="skill-item"><i class="devicon-django-plain"></i><span>Django</span></div>
+                    <div class="skill-item"><i class="devicon-flask-original"></i><span>Flask</span></div>
+                    <div class="skill-item"><i class="devicon-php-plain"></i><span>PHP</span></div>
+                    <div class="skill-item"><i class="devicon-symfony-original"></i><span>Symfony</span></div>
+                    <div class="skill-item"><i class="devicon-mysql-plain"></i><span>MySQL</span></div>
+                    <div class="skill-item"><i class="devicon-postgresql-plain"></i><span>PostgreSQL</span></div>
+                    <div class="skill-item"><i class="devicon-linux-plain"></i><span>Linux</span></div>
+                    <div class="skill-item"><i class="devicon-ubuntu-plain"></i><span>Ubuntu</span></div>
+                    <div class="skill-item"><i class="devicon-debian-plain"></i><span>Debian</span></div>
+                    <div class="skill-item"><i class="devicon-git-plain"></i><span>Git</span></div>
+                    <div class="skill-item"><i class="devicon-github-original"></i><span>GitHub</span></div>
+                    <div class="skill-item"><i class="devicon-cplusplus-plain"></i><span>C++</span></div>
+                    <div class="skill-item"><i class="devicon-arduino-plain"></i><span>Arduino</span></div>
+                    <!-- Icônes Font Awesome pour les technologies non présentes dans Devicon -->
+                    <div class="skill-item"><i class="fa-solid fa-server"></i><span>Proxmox VE</span></div>
+                    <div class="skill-item"><i class="fa-solid fa-cubes"></i><span>VMware</span></div>
+                    <div class="skill-item"><i class="fa-solid fa-gamepad"></i><span>Pygame</span></div>
+                    <div class="skill-item"><i class="fa-solid fa-database"></i><span>phpMyAdmin</span></div>
                 </div>
             </div>
         </section>
@@ -208,87 +182,136 @@
             <div class="container hidden">
                 <h2 class="section-title section-title-center">Projets</h2>
                 <div class="project-nav">
-                    <button class="btn active">Tous</button>
-                    <button class="btn">Web & Desktop</button>
-                    <button class="btn">IoT</button>
+                    <!-- Les boutons de filtre sont maintenant gérés en JS, pas besoin de les modifier ici -->
                 </div>
 
                 <div class="projects-grid">
-                    <div class="project-card " data-category="web">
-                        <h3>Portfolio Personnel</h3>
-                        <p>Création d'un portfolio personnel pour présenter mes compétences, expériences et projets.</p>
-                        <a href="#" class="btn ghost">Voir le projet</a>
+                    <div class="project-card" data-category="web"
+                        data-title="Elikya - Marketplace e-commerce"
+                        data-description="Elikya est une plateforme e-commerce full-stack qui met en relation des vendeurs et des acheteurs. Les vendeurs peuvent proposer leurs produits tandis que les acheteurs parcourent le catalogue, gèrent leur panier et passent commande. La plateforme integre des moyens de paiement congolais ainsi que les cartes Visa et Mastercard internationales. Developpee avec Flask, MySQL, HTML, CSS et JavaScript, elle comprend notamment l'authentification securisee, la verification par code OTP, la gestion des profils, des produits et des commandes."
+                        data-media="elikya/image.png, elikya/image copy.png, elikya/image copy 2.png, elikya/image copy 3.png, elikya/image copy 4.png">
+                        <img src="elikya/image.png" alt="Elikya - Marketplace e-commerce" class="project-image">
+                        <div class="project-overlay">
+                            <h3>Elikya - Marketplace e-commerce</h3>
+                            <button class="btn ghost open-modal-btn">Voir le projet</button>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="web"
+                        data-title="Portfolio Personnel"
+                        data-description="Création d'un portfolio personnel pour présenter mes compétences, expériences et projets."
+                        data-media="https://picsum.photos/seed/portfolio/800/600, https://picsum.photos/seed/portfolio2/800/600">
+                        <img src="https://picsum.photos/seed/portfolio/400/300" alt="Portfolio" class="project-image">
+                        <div class="project-overlay">
+                            <h3>Portfolio Personnel</h3>
+                            <button class="btn ghost open-modal-btn">Voir le projet</button>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="desktop"
+                        data-title="MarketLog"
+                        data-description="MarketLog est une application de gestion de stock simple et efficace. Elle permet de vendre, réapprovisionner, consulter les prix et visualiser le stock en temps réel. Les données sont enregistrées dans un fichier CSV, assurant une base fiable et persistante entre chaque utilisation."
+                        data-media="https://picsum.photos/seed/marketlog/800/600, https://picsum.photos/seed/marketlog2/800/600">
+                        <img src="https://picsum.photos/seed/marketlog/400/300" alt="MarketLog" class="project-image">
+                        <div class="project-overlay">
+                            <h3>MarketLog</h3>
+                            <button class="btn ghost open-modal-btn">Voir le projet</button>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="desktop"
+                        data-title="Jeu du serpent en python"
+                        data-description="Création d'un jeu simple en 2D utilisant Pygame & Turtle, mettant en pratique les concepts de programmation Pygame & Turtle."
+                        data-media="https://picsum.photos/seed/snakegame/800/600, https://picsum.photos/seed/snakegame2/800/600">
+                        <img src="https://picsum.photos/seed/snakegame/400/300" alt="Jeu du serpent" class="project-image">
+                        <div class="project-overlay">
+                            <h3>Jeu du serpent en python</h3>
+                            <button class="btn ghost open-modal-btn">Voir le projet</button>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="web"
+                        data-title="E-quiz"
+                        data-description="E-quiz est une application web de quiz interactif inspiree de Kahoot. Elle permet aux participants de rejoindre des sessions, de repondre aux questions et de suivre les scores en temps reel. Le projet met en oeuvre une interface dynamique pour la gestion des questions, des sessions de jeu et des resultats."
+                        data-media="Equiz/1001397190.mp4">
+                        <video class="project-image" autoplay muted loop playsinline preload="metadata" aria-label="Apercu du projet E-quiz">
+                            <source src="Equiz/1001397190.mp4" type="video/mp4">
+                        </video>
+                        <div class="project-overlay">
+                            <h3>E-quiz</h3>
+                            <button class="btn ghost open-modal-btn">Voir le projet</button>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="web"
+                        data-title="Bistrot Le Resto"
+                        data-description="Bistrot Le Rétro est un site web gastronomique présentant un restaurant lillois fusionnant cuisine traditionnelle et saveurs contemporaines."
+                        data-media="https://picsum.photos/seed/bistrot/800/600, https://picsum.photos/seed/bistrot2/800/600">
+                        <img src="https://picsum.photos/seed/bistrot/400/300" alt="Bistrot Le Resto" class="project-image">
+                        <div class="project-overlay">
+                            <h3>Bistrot Le Resto</h3>
+                            <button class="btn ghost open-modal-btn">Voir le projet</button>
+                        </div>
                     </div>
                     
-                    <div class="project-card " data-category="desktop">
-                        <h3>MarketLog</h3>
-                        <p>MarketLog est une application de gestion de stock simple et efficace. 
-                            Elle permet de vendre, réapprovisionner, consulter les prix et visualiser 
-                            le stock en temps réel. Les données sont enregistrées dans un fichier CSV, 
-                            assurant une base fiable et persistante entre chaque utilisation.</p>
-                        <a href="#" class="btn ghost">Voir le projet</a>
-                    </div>
-                    <div class="project-card " data-category="desktop">
-                        <h3>Jeu du serpent en python</h3>
-                        <p>Création d'un jeu simple en 2D utilisant Pygame & Turtle, mettant en 
-                            pratique les concepts de programmation Pygame & Turtle.</p>
-                        <a href="#" class="btn ghost">Voir le projet</a>
-                    </div>
-                    <div class="project-card " data-category="web">
-                        <h3>E-quiz</h3>
-                        <p>Application type Kahoot, quiz interactif multi‑joueurs avec interface web, 
-                            gestion des questions, scores et sessions.
-                        </p>
-                        <a href="#" class="btn ghost">Voir le projet</a>
-                    </div>
-                    <div class="project-card " data-category="web">
-                        <h3>Bistrot Le Resto</h3>
-                        <p>Bistrot Le Rétro est un site web gastronomique présentant un restaurant lillois 
-                            fusionnant cuisine traditionnelle et saveurs contemporaines.</p>
-                        <a href="#" class="btn ghost">Voir le projet</a>
-                    </div>
-                    <div class="project-card " data-category="web">
-                        <h3>Projet - Chichats</h3>
-                        <p>Chichats - Application web de réservation pour un bar à chicha & chats à Paris. 
-                            Les clients découvrent les services et réservent leurs tables, 
-                            les gérants gèrent toutes les réservations via un dashboard intuitif. 
-                            Créée avec PHP, MySQL, CSS et JavaScript pour une gestion complète des 
-                            réservations (CRUD). Interface moderne avec recherche et modales pour 
-                            éditer rapidement. Projet professionnel démontrant la conception d'une 
-                            plateforme fonctionnelle de bout en bout. </p>
-                        <a href="#" class="btn ghost">Voir le projet</a>
-                    </div>
-                    <div class="project-card " data-category="web">
-                        <h3>Projet - Web_blog</h3>
-                        <p>Web_blog - Application web de blog personnel. Les utilisateurs peuvent créer, 
-                            modifier et publier des articles. Les administrateurs peuvent gérer les utilisateurs 
-                            et les contenus via un tableau de bord. Créée avec PHP, MySQL, CSS et JavaScript pour 
-                            une expérience utilisateur fluide.</p>
-                        <a href="#" class="btn ghost">Voir le projet</a>
-                    </div>
-                    <div class="project-card " data-category="iot">
-                        <h3>Prototypage RFID</h3>
-                        <p>Projet de prototypage avec un lecteur RFID et une carte Arduino UNO pour le contrôle d'accès.</p>
-                        <a href="#" class="btn ghost">Voir le projet</a>
-                    </div>
-                    <div class="project-card " data-category="iot">
-                        <h3>Lecteur d'empreinte digitale</h3>
-                        <p>Intégration d'un capteur d'empreintes digitales AS608 pour un système de sécurité biométrique.</p>
-                        <a href="#" class="btn ghost">Voir le projet</a>
-                    </div>
-                    <div class="project-card " data-category="iot">
-                        <h3>Radar à ultrasons</h3>
-                        <p>Création d'un radar avec capteur à ultrasons et servomoteur, piloté par un ESP32 avec une interface web pour la visualisation.</p>
-                        <a href="#" class="btn ghost">Voir le projet</a>
+                    <div class="project-card" data-category="web"
+                        data-title="Projet - Chichats"
+                        data-description="Chichats - Application web de réservation pour un bar à chicha & chats à Paris. Les clients découvrent les services et réservent leurs tables, les gérants gèrent toutes les réservations via un dashboard intuitif. Créée avec PHP, MySQL, CSS et JavaScript pour une gestion complète des réservations (CRUD). Interface moderne avec recherche et modales pour éditer rapidement. Projet professionnel démontrant la conception d'une plateforme fonctionnelle de bout en bout."
+                        data-media="https://www.youtube.com/embed/dQw4w9WgXcQ, https://picsum.photos/seed/chichats/800/600, https://picsum.photos/seed/chichats2/800/600">
+                        <img src="https://picsum.photos/seed/chichats/400/300" alt="Chichats" class="project-image">
+                        <div class="project-overlay">
+                            <h3>Projet - Chichats</h3>
+                            <button class="btn ghost open-modal-btn">Voir le projet</button>
+                        </div>
                     </div>
 
+                    <div class="project-card" data-category="web"
+                        data-title="Projet - Web_blog"
+                        data-description="Web_blog - Application web de blog personnel. Les utilisateurs peuvent créer, modifier et publier des articles. Les administrateurs peuvent gérer les utilisateurs et les contenus via un tableau de bord. Créée avec PHP, MySQL, CSS et JavaScript pour une expérience utilisateur fluide."
+                        data-media="https://picsum.photos/seed/webblog/800/600, https://picsum.photos/seed/webblog2/800/600">
+                        <img src="https://picsum.photos/seed/webblog/400/300" alt="Web_blog" class="project-image">
+                        <div class="project-overlay">
+                            <h3>Projet - Web_blog</h3>
+                            <button class="btn ghost open-modal-btn">Voir le projet</button>
+                        </div>
+                    </div>
 
+                    <div class="project-card" data-category="iot"
+                        data-title="Prototypage RFID"
+                        data-description="Projet de prototypage avec un lecteur RFID et une carte Arduino UNO pour le contrôle d'accès."
+                        data-media="https://picsum.photos/seed/rfid/800/600, https://picsum.photos/seed/rfid2/800/600">
+                        <img src="https://picsum.photos/seed/rfid/400/300" alt="Prototypage RFID" class="project-image">
+                        <div class="project-overlay">
+                            <h3>Prototypage RFID</h3>
+                            <button class="btn ghost open-modal-btn">Voir le projet</button>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="iot"
+                        data-title="Lecteur d'empreinte digitale"
+                        data-description="Intégration d'un capteur d'empreintes digitales AS608 pour un système de sécurité biométrique."
+                        data-media="https://picsum.photos/seed/fingerprint/800/600, https://picsum.photos/seed/fingerprint2/800/600">
+                        <img src="https://picsum.photos/seed/fingerprint/400/300" alt="Lecteur d'empreinte digitale" class="project-image">
+                        <div class="project-overlay">
+                            <h3>Lecteur d'empreinte digitale</h3>
+                            <button class="btn ghost open-modal-btn">Voir le projet</button>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card" data-category="iot"
+                        data-title="Radar à ultrasons"
+                        data-description="Création d'un radar avec capteur à ultrasons et servomoteur, piloté par un ESP32 avec une interface web pour la visualisation."
+                        data-media="https://picsum.photos/seed/radar/800/600, https://picsum.photos/seed/radar2/800/600">
+                        <img src="https://picsum.photos/seed/radar/400/300" alt="Radar" class="project-image">
+                        <div class="project-overlay">
+                            <h3>Radar à ultrasons</h3>
+                            <button class="btn ghost open-modal-btn">Voir le projet</button>
+                        </div>
+                    </div>
 
                 </div>
             </div>
 
-        
-        
 
         <!-- Centres d’intérêt & qualités -->
         <section class="section section-light">
@@ -350,6 +373,26 @@
         <p>© 2026 – Daniel Bokingo – Tous droits réservés</p>
 
     </footer>
+
+    <!-- Modale Projet -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <div class="modal-gallery">
+                    <div class="gallery-slider">
+                        <!-- Les médias (images/vidéos) seront injectés ici par JS -->
+                    </div>
+                    <button class="gallery-nav prev">&#10094;</button>
+                    <button class="gallery-nav next">&#10095;</button>
+                </div>
+                <div class="modal-description">
+                    <h3 id="modal-title">Titre du projet</h3>
+                    <p id="modal-text">Description détaillée du projet...</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <a href="#top" class="back-to-top" aria-label="Retour en haut"><i class="fa-solid fa-arrow-up"></i></a>
 

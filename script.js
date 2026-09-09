@@ -8,6 +8,10 @@ document.addEventListener('DOMContentLoaded', function() {
         navLinks.classList.toggle('open');
     });
 
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => navLinks.classList.remove('open'));
+    });
+
     // Gestion des filtres de projets
     const filterButtons = document.querySelectorAll('.project-nav .btn');
     const projectCards = document.querySelectorAll('.projects-grid .project-card');
@@ -108,6 +112,12 @@ document.addEventListener('DOMContentLoaded', function() {
     closeModal.addEventListener('click', closeModalFunction);
     modal.addEventListener('click', (e) => {
         if (e.target === modal) closeModalFunction();
+    });
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            navLinks.classList.remove('open');
+            if (modal.classList.contains('visible')) closeModalFunction();
+        }
     });
     nextBtn.addEventListener('click', () => { if(currentSlide < slides.length - 1) showSlide(currentSlide + 1); updateNavButtons(); });
     prevBtn.addEventListener('click', () => { if(currentSlide > 0) showSlide(currentSlide - 1); updateNavButtons(); });

@@ -24,6 +24,7 @@ body {
     background-color: var(--black);
     color: var(--white);
     line-height: 1.6;
+    overflow-x: hidden;
 }
 a {
     color: #f6f2f2;
@@ -620,9 +621,14 @@ a {
 }
 
 @media (max-width: 750px) {
+    .navbar {
+        padding: 16px 5%;
+    }
+
     .nav-links {
         position: absolute;
         top: 60px;
+        left: 5%;
         right: 5%;
         background: rgba(0,0,0,0.95);
         padding: 14px 18px;
@@ -636,14 +642,62 @@ a {
         display: flex;
     }
 
+    .nav-links a {
+        display: block;
+        padding: 8px 0;
+    }
+
     .nav-toggle {
         display: flex;
+        padding: 8px;
     }
 }
 
 @media (max-width: 600px) {
+    .container {
+        width: min(100% - 32px, 1100px);
+    }
+
     .hero-content {
-        padding-top: 20px;
+        padding: 28px 16px 56px;
+    }
+
+    .hero-actions {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 10px;
+        width: min(100%, 320px);
+        margin: 0 auto;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+        min-height: 44px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .project-card {
+        aspect-ratio: 16 / 11;
+    }
+
+    .project-overlay {
+        opacity: 1;
+        transform: none;
+        padding: 16px;
+    }
+
+    .project-overlay h3 {
+        font-size: 1rem;
+        margin-bottom: 8px;
+    }
+
+    .project-overlay .btn {
+        min-height: 42px;
+        width: 100%;
     }
 
     .section {
@@ -795,6 +849,45 @@ a {
 
     .modal-content {
         padding: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .modal {
+        align-items: flex-start;
+        padding: 12px;
+    }
+
+    .modal-content {
+        width: 100%;
+        max-height: calc(100vh - 24px);
+        padding: 44px 12px 12px;
+    }
+
+    .modal-body {
+        gap: 16px;
+    }
+
+    .modal-gallery {
+        min-height: 0;
+        height: min(58vh, 420px);
+    }
+
+    .modal-description {
+        padding: 0 4px 8px;
+    }
+
+    .close-modal {
+        top: 8px;
+        right: 12px;
+        padding: 6px 10px;
+        line-height: 1;
+    }
+
+    .gallery-nav {
+        width: 42px;
+        height: 42px;
+        padding: 0;
     }
 }
 

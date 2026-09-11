@@ -7,6 +7,7 @@
     --white: #FFFFFF;
     --text: #222222;
     --muted: #777777;
+    --skill-bg: #123B4D;
     --radius: 10px;
     --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.25);
 }
@@ -200,6 +201,29 @@ a {
     margin-bottom: 24px;
 }
 
+.hero-about {
+    display: grid;
+    gap: 14px;
+    margin-bottom: 24px;
+    color: #E0E0E0;
+}
+
+.hero-about p {
+    margin: 0;
+}
+
+.hero-objective {
+    padding: 16px 18px;
+    border-left: 3px solid var(--blue);
+    background: rgba(0, 0, 0, 0.24);
+}
+
+.hero-objective h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    margin-bottom: 6px;
+}
+
 .hero-actions {
     display: flex;
     gap: 16px;
@@ -317,7 +341,7 @@ a {
 }
 
 .skill-item {
-    background: linear-gradient(145deg, #1a1a1a, #111111);
+    background: var(--skill-bg);
     border-radius: var(--radius);
     padding: 20px;
     display: flex;
@@ -326,7 +350,7 @@ a {
     justify-content: center;
     gap: 12px;
     text-align: center;
-    border: 1px solid transparent;
+    border: 1px solid rgba(91, 190, 231, 0.35);
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -340,7 +364,7 @@ a {
 
 .skill-item span {
     font-size: 0.9rem;
-    color: var(--muted);
+    color: #EAF6FB;
     transition: color 0.3s ease;
 }
 
@@ -668,6 +692,10 @@ a {
         gap: 10px;
         width: min(100%, 320px);
         margin: 0 auto;
+    }
+
+    .hero-about {
+        text-align: left;
     }
 
     .hero-actions .btn {

@@ -12,39 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="hero" id="top">
-        <nav class="navbar">
-            <div class="logo">D<span>B</span></div>
-            <ul class="nav-links">
-                <li><a href="#skills">Compétences</a></li>
-                <li><a href="#experience">Expériences</a></li>
-                <li><a href="#projects">Projets</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <button class="nav-toggle" aria-label="Menu">
-                <span></span><span></span><span></span>
-            </button>
-        </nav>
-
-        <div class="hero-content">
-            <div class="hero-image">
-                <img src="ok_photo.png" alt="Photo de Daniel Bokingo">
-            </div>
-            <div class="hero-text hidden">
-                <p class="hero-tagline">Étudiant en informatique - développeur full-stack</p>
-                <p class="hero-tagline">À <strong>My Digital School</strong>, campus de Lille</p>
-                <h1 >Daniel <span>Bokingo</span></h1>
-                <p class="hero-subtitle">
-                    Bonjour et bienvenue sur mon portfolio ! Je m'appelle Daniel Bokingo, étudiant en informatique et développeur web passionné par l'architecture logicielle, les bases de données et la sécurité. J'aime concevoir des projets concrets, relever de nouveaux défis techniques et approfondir continuellement mes compétences. En dehors de l'informatique, je m'intéresse à la musique, au basket-ball et aux voitures.
-                </p>
-                <div class="hero-actions">
-                    <a href="#contact" class="btn primary">Me contacter</a>
-                    <a href="#skills" class="btn ghost">Voir mes compétences</a>
-                    <a href="Daniel-bokingo-botay.pdf" class="btn ghost" download="Daniel-bokingo-botay.pdf">Télécharger CV</a>
-                </div>
-            </div>
-        </div>
-    </header>
+    <div data-include="header.html"></div>
 
     <main>
         <!-- Compétences -->
@@ -85,20 +53,20 @@
                     <div>
                         <h2 class="section-title">Soft skills</h2>
                         <ul class="pill-list">
-                            <li>Résolution de problèmes</li>
-                            <li>Travail d'équipe</li>
-                            <li>Communication</li>
-                            <li>Adaptabilité</li>
-                            <li>Autonomie</li>
-                            <li>Curiosité technique</li>
+                            <li>Je résous des problèmes</li>
+                            <li>Je travaille en équipe</li>
+                            <li>Je communique avec clarté</li>
+                            <li>Je m’adapte</li>
+                            <li>Je travaille en autonomie</li>
+                            <li>Je reste curieux techniquement</li>
                         </ul>
                     </div>
                     <div>
                         <h2 class="section-title">Centres d’intérêt</h2>
                         <ul class="pill-list">
-                            <li>Musique</li>
-                            <li>Basket-ball</li>
-                            <li>Voitures</li>
+                            <li>J’aime la musique</li>
+                            <li>Je pratique le basket-ball</li>
+                            <li>Je m’intéresse aux voitures</li>
                         </ul>
                     </div>
                 </div>
@@ -116,7 +84,7 @@
                 <div class="projects-grid">
                     <div class="project-card" data-category="web"
                         data-title="Elikya - Marketplace e-commerce"
-                        data-description="Elikya est une plateforme e-commerce full-stack qui met en relation des vendeurs et des acheteurs. Les vendeurs peuvent proposer leurs produits tandis que les acheteurs parcourent le catalogue, gèrent leur panier et passent commande. La plateforme intègre des moyens de paiement congolais ainsi que les cartes Visa et Mastercard internationales. Développée avec Flask, MySQL, HTML, CSS et JavaScript, elle comprend notamment l'authentification sécurisée, la vérification par code OTP, la gestion des profils, des produits et des commandes."
+                        data-description="J’ai développé Elikya, une marketplace e-commerce full-stack qui met en relation vendeurs et acheteurs. J’y ai créé le catalogue, le panier et le parcours de commande, avec des paiements congolais ainsi que Visa et Mastercard. Avec Flask, MySQL, HTML, CSS et JavaScript, j’ai aussi réalisé l’authentification sécurisée, la vérification par code OTP et la gestion des profils, produits et commandes."
                         data-media="elikya/image.png, elikya/image copy.png, elikya/image copy 2.png, elikya/image copy 3.png, elikya/image copy 4.png">
                         <img src="elikya/image.png" alt="Elikya - Marketplace e-commerce" class="project-image">
                         <div class="project-overlay">
@@ -127,7 +95,7 @@
 
                     <div class="project-card" data-category="web"
                         data-title="E-quiz"
-                        data-description="E-quiz est une application web de quiz interactif inspirée de Kahoot. Elle permet aux participants de rejoindre des sessions, de répondre aux questions et de suivre les scores en temps réel. Le projet met en œuvre une interface dynamique pour la gestion des questions, des sessions de jeu et des résultats."
+                        data-description="J’ai réalisé E-quiz, une application de quiz interactif inspirée de Kahoot. Les participants rejoignent une session, répondent aux questions et suivent les scores en temps réel. J’y ai conçu une interface dynamique pour gérer les questions, les sessions de jeu et les résultats."
                         data-media="Equiz/1001397190.mp4">
                         <video class="project-image" autoplay muted loop playsinline preload="metadata" aria-label="Aperçu du projet E-quiz">
                             <source src="Equiz/1001397190.mp4" type="video/mp4">
@@ -140,7 +108,7 @@
 
                     <div class="project-card" data-category="web"
                         data-title="Autisme HDF"
-                        data-description="Autisme HDF est un projet réalisé lors de mon stage chez Autisme Hauts-de-France. Il comprend un site vitrine pour présenter l'organisation ainsi qu'un tableau de bord administrateur sécurisé. La plateforme intègre une API de paiement et une base de données pour gérer les réservations et les événements organisés par l'association. L'accès à l'administration est protégé par un système d'authentification et des mesures de sécurité contre les principales vulnérabilités répertoriées par l'OWASP. J'ai également rédigé les mentions légales et la politique de confidentialité afin de contribuer au respect du RGPD."
+                        data-description="J’ai réalisé ce projet pendant mon stage chez Autisme Hauts-de-France : un site vitrine et un tableau de bord administrateur sécurisé. J’ai intégré une API de paiement et une base de données pour gérer les réservations et les événements. J’ai protégé l’administration contre les principales vulnérabilités OWASP et rédigé les mentions légales ainsi que la politique de confidentialité pour contribuer au respect du RGPD."
                         data-media="autisme_hf/a.png, autisme_hf/b.png, autisme_hf/c.png, autisme_hf/d.png, autisme_hf/e.png, autisme_hf/f.png">
                         <img src="autisme_hf/a.png" alt="Autisme HDF" class="project-image">
                         <div class="project-overlay">
@@ -151,7 +119,7 @@
 
                     <div class="project-card" data-category="desktop"
                         data-title="MarketLog"
-                        data-description="MarketLog est une application de gestion de stock simple et efficace. Elle permet de vendre, réapprovisionner, consulter les prix et visualiser le stock en temps réel. Les données sont enregistrées dans un fichier CSV, assurant une base fiable et persistante entre chaque utilisation."
+                        data-description="J’ai créé MarketLog, une application de gestion de stock qui permet de vendre, réapprovisionner, consulter les prix et suivre le stock en temps réel. J’enregistre les données dans un fichier CSV pour les conserver entre les utilisations."
                         data-media="marketlog/image.png, marketlog/image copy.png, marketlog/image copy 2.png, marketlog/image copy 3.png">
                         <img src="marketlog/image.png" alt="MarketLog" class="project-image">
                         <div class="project-overlay">
@@ -162,7 +130,7 @@
 
                     <div class="project-card" data-category="desktop"
                         data-title="Jeu du serpent en python"
-                        data-description="Création d'un jeu simple en 2D utilisant Pygame & Turtle, mettant en pratique les concepts de programmation Pygame & Turtle."
+                        data-description="J’ai créé un jeu simple en 2D avec Pygame et Turtle. Ce projet m’a permis de mettre en pratique les bases de la programmation et la création d’interactions de jeu."
                         data-media="https://picsum.photos/seed/snakegame/800/600, https://picsum.photos/seed/snakegame2/800/600">
                         <img src="https://picsum.photos/seed/snakegame/400/300" alt="Jeu du serpent" class="project-image">
                         <div class="project-overlay">
@@ -173,7 +141,7 @@
 
                     <div class="project-card" data-category="web"
                         data-title="Portfolio Personnel"
-                        data-description="Création d'un portfolio personnel pour présenter mes compétences, expériences et projets."
+                        data-description="J’ai conçu ce portfolio pour présenter mon parcours, mes compétences et les projets que j’ai réalisés. Je l’améliore au fil de mon apprentissage."
                         data-media="https://picsum.photos/seed/portfolio/800/600, https://picsum.photos/seed/portfolio2/800/600">
                         <img src="https://picsum.photos/seed/portfolio/400/300" alt="Portfolio" class="project-image">
                         <div class="project-overlay">
@@ -184,7 +152,7 @@
 
                     <div class="project-card" data-category="web"
                         data-title="Bistrot Le Rétro"
-                        data-description="Bistrot Le Rétro est un site web gastronomique présentant un restaurant lillois fusionnant cuisine traditionnelle et saveurs contemporaines."
+                        data-description="J’ai conçu le site gastronomique du Bistrot Le Rétro, un restaurant lillois qui associe cuisine traditionnelle et saveurs contemporaines. J’y mets en valeur son identité et son univers culinaire."
                         data-media="https://picsum.photos/seed/bistrot/800/600, https://picsum.photos/seed/bistrot2/800/600">
                         <img src="https://picsum.photos/seed/bistrot/400/300" alt="Bistrot Le Rétro" class="project-image">
                         <div class="project-overlay">
@@ -195,7 +163,7 @@
                     
                     <div class="project-card" data-category="web"
                         data-title="Projet - Chichats"
-                        data-description="Chichats - Application web de réservation pour un bar à chicha & chats à Paris. Les clients découvrent les services et réservent leurs tables, les gérants gèrent toutes les réservations via un dashboard intuitif. Créée avec PHP, MySQL, CSS et JavaScript pour une gestion complète des réservations (CRUD). Interface moderne avec recherche et modales pour éditer rapidement. Projet professionnel démontrant la conception d'une plateforme fonctionnelle de bout en bout."
+                        data-description="J’ai développé Chichats, une application de réservation pour un bar à chicha et chats à Paris. Les clients découvrent les services et réservent une table ; les gérants pilotent les réservations depuis un tableau de bord. Avec PHP, MySQL, CSS et JavaScript, j’ai créé les opérations CRUD, la recherche et des fenêtres de modification rapide."
                         data-media="https://www.youtube.com/embed/dQw4w9WgXcQ, https://picsum.photos/seed/chichats/800/600, https://picsum.photos/seed/chichats2/800/600">
                         <img src="https://picsum.photos/seed/chichats/400/300" alt="Chichats" class="project-image">
                         <div class="project-overlay">
@@ -206,7 +174,7 @@
 
                     <div class="project-card" data-category="web"
                         data-title="Projet - Web_blog"
-                        data-description="Web_blog - Application web de blog personnel. Les utilisateurs peuvent créer, modifier et publier des articles. Les administrateurs peuvent gérer les utilisateurs et les contenus via un tableau de bord. Créée avec PHP, MySQL, CSS et JavaScript pour une expérience utilisateur fluide."
+                        data-description="J’ai développé Web_blog, une application de blog où chacun peut créer, modifier et publier des articles. J’ai aussi conçu un tableau de bord permettant aux administrateurs de gérer les utilisateurs et les contenus. J’ai réalisé le projet avec PHP, MySQL, CSS et JavaScript."
                         data-media="https://picsum.photos/seed/webblog/800/600, https://picsum.photos/seed/webblog2/800/600">
                         <img src="https://picsum.photos/seed/webblog/400/300" alt="Web_blog" class="project-image">
                         <div class="project-overlay">
@@ -217,7 +185,7 @@
 
                     <div class="project-card" data-category="iot"
                         data-title="Prototypage RFID"
-                        data-description="Projet de prototypage avec un lecteur RFID et une carte Arduino UNO pour le contrôle d'accès."
+                        data-description="J’ai prototypé un système de contrôle d’accès avec un lecteur RFID et une carte Arduino UNO. Ce projet m’a permis d’expérimenter l’identification par badge et l’électronique embarquée."
                         data-media="https://picsum.photos/seed/rfid/800/600, https://picsum.photos/seed/rfid2/800/600">
                         <img src="https://picsum.photos/seed/rfid/400/300" alt="Prototypage RFID" class="project-image">
                         <div class="project-overlay">
@@ -228,7 +196,7 @@
 
                     <div class="project-card" data-category="iot"
                         data-title="Lecteur d'empreinte digitale"
-                        data-description="Intégration d'un capteur d'empreintes digitales AS608 pour un système de sécurité biométrique."
+                        data-description="J’ai intégré un capteur d’empreintes digitales AS608 à un prototype de sécurité biométrique. J’ai travaillé sur la lecture et la vérification des empreintes pour contrôler l’accès."
                         data-media="https://picsum.photos/seed/fingerprint/800/600, https://picsum.photos/seed/fingerprint2/800/600">
                         <img src="https://picsum.photos/seed/fingerprint/400/300" alt="Lecteur d'empreinte digitale" class="project-image">
                         <div class="project-overlay">
@@ -239,7 +207,7 @@
                     
                     <div class="project-card" data-category="iot"
                         data-title="Radar à ultrasons"
-                        data-description="Création d'un radar avec capteur à ultrasons et servomoteur, piloté par un ESP32 avec une interface web pour la visualisation."
+                        data-description="J’ai créé un radar à ultrasons piloté par un ESP32, avec un servomoteur et une interface web de visualisation. Ce prototype me permet de représenter les distances détectées par le capteur."
                         data-media="https://picsum.photos/seed/radar/800/600, https://picsum.photos/seed/radar2/800/600">
                         <img src="https://picsum.photos/seed/radar/400/300" alt="Radar" class="project-image">
                         <div class="project-overlay">
@@ -260,16 +228,13 @@
                     <div class="timeline-item ">
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
-                            <h3>Baccalauréat en électronique industrielle</h3>
-                            <p class="timeline-sub">Septembre 2021 – juillet 2025 · Institut Technique Salama-Don Bosco - Lubumbashi, RDC</p>
+                            <h3>J’ai obtenu mon baccalauréat en électronique industrielle</h3>
+                            <p class="timeline-sub">Septembre 2021 – juillet 2025 · Institut Technique Salama-Don Bosco, Lubumbashi, RDC</p>
                             <p>
-                                <li>Cours en électricité</li>
-                                <li>Cours en électronique</li>
-                                <li>Cours en circuits logiques et automatisme</li>
-                                <li>Cours en schéma électrique</li>
-                                <li>Cours en schéma électronique</li>
-                                <li>TP en électricité des bâtiments</li>
-                                <li>TP en électronique</li>
+                                <li>J’ai étudié l’électricité et l’électronique</li>
+                                <li>J’ai appris les circuits logiques et l’automatisme</li>
+                                <li>J’ai travaillé sur les schémas électriques et électroniques</li>
+                                <li>J’ai pratiqué l’électricité des bâtiments et l’électronique</li>
                             </p>
                         </div>
                     </div>
@@ -277,12 +242,12 @@
                     <div class="timeline-item ">
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
-                            <h3>Technicien de maintenance - Stage</h3>
+                            <h3>J’ai effectué un stage en maintenance</h3>
                             <p class="timeline-sub">Février 2025 – avril 2025 · Société Nationale des Chemins de Fer du Congo – Lubumbashi, RDC</p>
                             <p>
-                                <li>Maintenance des équipements électriques</li>
-                                <li>Maintenance des équipements électroniques</li>
-                                <li>Rédaction d'un rapport de stage</li>
+                                <li>J’ai assuré la maintenance d’équipements électriques</li>
+                                <li>J’ai entretenu des équipements électroniques</li>
+                                <li>J’ai rédigé un rapport de stage</li>
                             </p>
                         </div>
                     </div>
@@ -290,20 +255,13 @@
                     <div class="timeline-item ">
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
-                            <h3>Bachelor en Administration système DevOps</h3>
+                            <h3>Je me suis formé à l’administration système et au DevOps</h3>
                             <p class="timeline-sub">Janvier 2026 - août 2026 · École IT, Valenciennes, France</p>
                             <p>
-                                <li>Python</li>
-                                <li>HTML</li>
-                                <li>CSS</li>
-                                <li>JavaScript</li>
-                                <li>PHP</li>
-                                <li>Programmation Orientée Objet</li>
-                                <li>MySQL</li>
-                                <li>Git</li>
-                                <li>Linux</li>
-                                <li>Windows</li>
-                                <li>Administration système (Windows et Linux)</li>
+                                <li>J’ai étudié Python, HTML, CSS, JavaScript et PHP</li>
+                                <li>J’ai pratiqué la programmation orientée objet et MySQL</li>
+                                <li>J’ai utilisé Git, Linux et Windows</li>
+                                <li>J’ai appris à administrer des systèmes Windows et Linux</li>
 
                             </p>
                         </div>
@@ -311,20 +269,13 @@
                     <div class="timeline-item ">
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
-                            <h3>Bachelor en Développement Web (deuxième année)</h3>
+                            <h3>Je prépare un bachelor en développement web</h3>
                             <p class="timeline-sub">Septembre 2026 - aujourd'hui · <strong>My Digital School</strong>, Lille, France</p>
                             <p>
-                                <li>Python</li>
-                                <li>HTML</li>
-                                <li>CSS</li>
-                                <li>JavaScript</li>
-                                <li>PHP</li>
-                                <li>Programmation Orientée Objet</li>
-                                <li>MySQL</li>
-                                <li>Git</li>
-                                <li>Linux</li>
-                                <li>Windows</li>
-                                <li>Administration système (Windows et Linux)</li>
+                                <li>J’approfondis Python, HTML, CSS, JavaScript et PHP</li>
+                                <li>Je pratique la programmation orientée objet et MySQL</li>
+                                <li>J’utilise Git, Linux et Windows</li>
+                                <li>Je développe mes compétences en administration système</li>
 
                             </p>
                         </div>
@@ -342,19 +293,20 @@
             <div class="container hidden">
                 <h2 class="section-title section-title-center">Contact</h2>
                 <p class="contact-intro">
-                    Intéressé(e) par mon profil pour un stage, une alternance ou une collaboration sur un projet ?
-                    N’hésitez pas à me contacter.
+                    <i class="fa-solid fa-handshake" aria-hidden="true"></i>
+                    Je suis disponible pour un stage, une alternance ou une collaboration sur un projet.
+                    Écrivez-moi pour en discuter.
                 </p>
                 <div class="contact-grid">
                     <form class="contact-form" onsubmit="return false;">
                         <div class="contact-info">
-                          <p><i class="fa-solid fa-location-dot"></i><strong>Localisation :</strong> Valenciennes, France</p>
-                            <p><i class="fa-solid fa-envelope"></i><strong>Email :</strong> <a href="mailto:bokingodaniel4@gmail.com">bokingodaniel4@gmail.com</a></p>
-                            <p><i class="fa-brands fa-linkedin"></i><strong>LinkedIn :</strong> <a href="https://www.linkedin.com/in/daniel-bokingo-024415357/" target="_blank" rel="noopener noreferrer">
+                                                    <p><i class="fa-solid fa-location-dot"></i><strong>Je suis basé à :</strong> Valenciennes, France</p>
+                                                        <p><i class="fa-solid fa-envelope"></i><strong>Mon email :</strong> <a href="mailto:bokingodaniel4@gmail.com">bokingodaniel4@gmail.com</a></p>
+                                                        <p><i class="fa-brands fa-linkedin"></i><strong>Mon profil LinkedIn :</strong> <a href="https://www.linkedin.com/in/daniel-bokingo-024415357/" target="_blank" rel="noopener noreferrer">
                                 danielbokingo.LinkedIn</a></p>
-                            <p><i class="fa-brands fa-github"></i><strong>GitHub :</strong> <a href="https://github.com/BonkingoDaniel006" target="_blank" rel="noopener noreferrer">
+                            <p><i class="fa-brands fa-github"></i><strong>Mon GitHub :</strong> <a href="https://github.com/BonkingoDaniel006" target="_blank" rel="noopener noreferrer">
                                 github.com/BonkingoDaniel006</a></p>
-                            <p><i class="fa-solid fa-phone"></i><strong>Téléphone :</strong> <a href="tel:+33759451864">+33 7 59 45 18 64</a></p>
+                            <p><i class="fa-solid fa-phone"></i><strong>Mon téléphone :</strong> <a href="tel:+33759451864">+33 7 59 45 18 64</a></p>
                         </div>
                         
                         
@@ -366,32 +318,8 @@
         </section>
     </main>
 
-    <footer class="footer">
-        <p>© 2026 – Daniel Bokingo – Tous droits réservés</p>
-
-    </footer>
-
-    <!-- Modale Projet -->
-    <div id="project-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <div class="modal-body">
-                <div class="modal-gallery">
-                    <div class="gallery-slider">
-                        <!-- Les médias (images/vidéos) seront injectés ici par JS -->
-                    </div>
-                    <button class="gallery-nav prev">&#10094;</button>
-                    <button class="gallery-nav next">&#10095;</button>
-                </div>
-                <div class="modal-description">
-                    <h3 id="modal-title">Titre du projet</h3>
-                    <p id="modal-text">Description détaillée du projet...</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <a href="#top" class="back-to-top" aria-label="Retour en haut"><i class="fa-solid fa-arrow-up"></i></a>
+    <div data-include="footer.html"></div>
+    <div data-include="base.html"></div>
 
     <script src="script.js"></script>
 </body>

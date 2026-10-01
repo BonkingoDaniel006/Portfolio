@@ -19,29 +19,34 @@
         <section id="skills" class="section section-light">
             <div class="container hidden">
                 <h2 class="section-title section-title-center">Compétences</h2>
+                <div class="skill-filter-nav" aria-label="Filtrer les compétences"></div>
                 <div class="skills-grid-new">
-                    <div class="skill-item"><i class="devicon-html5-plain"></i><span>HTML5</span></div>
-                    <div class="skill-item"><i class="devicon-css3-plain"></i><span>CSS3</span></div>
-                    <div class="skill-item"><i class="devicon-javascript-plain"></i><span>JavaScript</span></div>
-                    <div class="skill-item"><i class="devicon-python-plain"></i><span>Python</span></div>
-                    <div class="skill-item"><i class="devicon-django-plain"></i><span>Django</span></div>
-                    <div class="skill-item"><i class="devicon-flask-original"></i><span>Flask</span></div>
-                    <div class="skill-item"><i class="devicon-php-plain"></i><span>PHP</span></div>
-                    <div class="skill-item"><i class="devicon-symfony-original"></i><span>Symfony</span></div>
-                    <div class="skill-item"><i class="devicon-mysql-plain"></i><span>MySQL</span></div>
-                    <div class="skill-item"><i class="devicon-postgresql-plain"></i><span>PostgreSQL</span></div>
-                    <div class="skill-item"><i class="devicon-linux-plain"></i><span>Linux</span></div>
-                    <div class="skill-item"><i class="devicon-ubuntu-plain"></i><span>Ubuntu</span></div>
-                    <div class="skill-item"><i class="devicon-debian-plain"></i><span>Debian</span></div>
-                    <div class="skill-item"><i class="devicon-git-plain"></i><span>Git</span></div>
-                    <div class="skill-item"><i class="devicon-github-original"></i><span>GitHub</span></div>
-                    <div class="skill-item"><i class="devicon-cplusplus-plain"></i><span>C++</span></div>
-                    <div class="skill-item"><i class="devicon-arduino-plain"></i><span>Arduino</span></div>
-                    <!-- Icônes Font Awesome pour les technologies non présentes dans Devicon -->
-                    <div class="skill-item"><i class="fa-solid fa-server"></i><span>Proxmox VE</span></div>
-                    <div class="skill-item"><i class="fa-solid fa-cubes"></i><span>VMware</span></div>
-                    <div class="skill-item"><i class="fa-solid fa-gamepad"></i><span>Pygame</span></div>
-                    <div class="skill-item"><i class="fa-solid fa-database"></i><span>phpMyAdmin</span></div>
+                    <div class="skill-item" data-category="front"><i class="devicon-html5-plain"></i><span>HTML5</span></div>
+                    <div class="skill-item" data-category="front"><i class="devicon-css3-plain"></i><span>CSS3</span></div>
+                    <div class="skill-item" data-category="front"><i class="devicon-javascript-plain"></i><span>JavaScript</span></div>
+
+                    <div class="skill-item" data-category="back"><i class="devicon-python-plain"></i><span>Python</span></div>
+                    <div class="skill-item" data-category="back"><i class="devicon-django-plain"></i><span>Django</span></div>
+                    <div class="skill-item" data-category="back"><i class="devicon-flask-original"></i><span>Flask</span></div>
+                    <div class="skill-item" data-category="back"><i class="devicon-php-plain"></i><span>PHP</span></div>
+                    <div class="skill-item" data-category="back"><i class="devicon-symfony-original"></i><span>Symfony</span></div>
+                    <div class="skill-item" data-category="back"><i class="fa-solid fa-gamepad"></i><span>Pygame</span></div>
+
+                    <div class="skill-item" data-category="bdd"><i class="devicon-mysql-plain"></i><span>MySQL</span></div>
+                    <div class="skill-item" data-category="bdd"><i class="devicon-postgresql-plain"></i><span>PostgreSQL</span></div>
+                    <div class="skill-item" data-category="bdd"><i class="fa-solid fa-database"></i><span>phpMyAdmin</span></div>
+
+                    <div class="skill-item" data-category="devops"><i class="devicon-linux-plain"></i><span>Linux</span></div>
+                    <div class="skill-item" data-category="devops"><i class="devicon-ubuntu-plain"></i><span>Ubuntu</span></div>
+                    <div class="skill-item" data-category="devops"><i class="devicon-debian-plain"></i><span>Debian</span></div>
+                    <div class="skill-item" data-category="devops"><i class="devicon-git-plain"></i><span>Git</span></div>
+                    <div class="skill-item" data-category="devops"><i class="devicon-github-original"></i><span>GitHub</span></div>
+                    <div class="skill-item" data-category="devops"><i class="devicon-docker-plain"></i><span>Docker</span></div>
+                    <div class="skill-item" data-category="devops"><i class="fa-solid fa-server"></i><span>Proxmox VE</span></div>
+                    <div class="skill-item" data-category="devops"><i class="fa-solid fa-cubes"></i><span>VMware</span></div>
+
+                    <div class="skill-item" data-category="iot"><i class="devicon-cplusplus-plain"></i><span>C++</span></div>
+                    <div class="skill-item" data-category="iot"><i class="devicon-arduino-plain"></i><span>Arduino</span></div>
                 </div>
             </div>
         </section>
@@ -77,7 +82,7 @@
         <section id="projects" class="section section-dark">
             <div class="container hidden">
                 <h2 class="section-title section-title-center">Projets</h2>
-                <div class="project-nav">
+                <div class="project-nav" aria-label="Filtrer les projets">
                     <!-- Les boutons de filtre sont maintenant gérés en JS, pas besoin de les modifier ici -->
                 </div>
 
@@ -228,13 +233,41 @@
                     <div class="timeline-item ">
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
-                            <h3>J’ai obtenu mon baccalauréat en électronique industrielle</h3>
-                            <p class="timeline-sub">Septembre 2021 – juillet 2025 · Institut Technique Salama-Don Bosco, Lubumbashi, RDC</p>
+                            <h3>Je prépare un bachelor en développement web</h3>
+                            <p class="timeline-sub">Septembre 2026 - aujourd'hui · <strong>My Digital School</strong>, Lille, France</p>
                             <p>
-                                <li>J’ai étudié l’électricité et l’électronique</li>
-                                <li>J’ai appris les circuits logiques et l’automatisme</li>
-                                <li>J’ai travaillé sur les schémas électriques et électroniques</li>
-                                <li>J’ai pratiqué l’électricité des bâtiments et l’électronique</li>
+                                <li>J’approfondis Python, HTML, CSS, JavaScript et PHP</li>
+                                <li>Je pratique la programmation orientée objet et MySQL</li>
+                                <li>J’utilise Git, Linux et Windows</li>
+                                <li>Je développe mes compétences en administration système</li>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item ">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>J’ai réalisé un stage chez Autisme Hauts-de-France</h3>
+                            <p class="timeline-sub">Stage en développement web · période à préciser · Autisme Hauts-de-France</p>
+                            <p>
+                                <li>J’ai développé un site vitrine et un tableau de bord administrateur sécurisé</li>
+                                <li>J’ai intégré une API de paiement et une base de données pour les réservations et événements</li>
+                                <li>J’ai renforcé la sécurité de l’administration contre les principales vulnérabilités OWASP</li>
+                                <li>J’ai rédigé les mentions légales et la politique de confidentialité pour contribuer au respect du RGPD</li>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item ">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>Je me suis formé à l’administration système et au DevOps</h3>
+                            <p class="timeline-sub">Janvier 2026 - août 2026 · École IT, Valenciennes, France</p>
+                            <p>
+                                <li>J’ai étudié Python, HTML, CSS, JavaScript et PHP</li>
+                                <li>J’ai pratiqué la programmation orientée objet et MySQL</li>
+                                <li>J’ai utilisé Git, Linux et Windows</li>
+                                <li>J’ai appris à administrer des systèmes Windows et Linux</li>
                             </p>
                         </div>
                     </div>
@@ -255,28 +288,13 @@
                     <div class="timeline-item ">
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
-                            <h3>Je me suis formé à l’administration système et au DevOps</h3>
-                            <p class="timeline-sub">Janvier 2026 - août 2026 · École IT, Valenciennes, France</p>
+                            <h3>J’ai obtenu mon baccalauréat en électronique industrielle</h3>
+                            <p class="timeline-sub">Septembre 2021 – juillet 2025 · Institut Technique Salama-Don Bosco, Lubumbashi, RDC</p>
                             <p>
-                                <li>J’ai étudié Python, HTML, CSS, JavaScript et PHP</li>
-                                <li>J’ai pratiqué la programmation orientée objet et MySQL</li>
-                                <li>J’ai utilisé Git, Linux et Windows</li>
-                                <li>J’ai appris à administrer des systèmes Windows et Linux</li>
-
-                            </p>
-                        </div>
-                    </div>
-                    <div class="timeline-item ">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <h3>Je prépare un bachelor en développement web</h3>
-                            <p class="timeline-sub">Septembre 2026 - aujourd'hui · <strong>My Digital School</strong>, Lille, France</p>
-                            <p>
-                                <li>J’approfondis Python, HTML, CSS, JavaScript et PHP</li>
-                                <li>Je pratique la programmation orientée objet et MySQL</li>
-                                <li>J’utilise Git, Linux et Windows</li>
-                                <li>Je développe mes compétences en administration système</li>
-
+                                <li>J’ai étudié l’électricité et l’électronique</li>
+                                <li>J’ai appris les circuits logiques et l’automatisme</li>
+                                <li>J’ai travaillé sur les schémas électriques et électroniques</li>
+                                <li>J’ai pratiqué l’électricité des bâtiments et l’électronique</li>
                             </p>
                         </div>
                     </div>
@@ -321,6 +339,6 @@
     <div data-include="footer.html"></div>
     <div data-include="base.html"></div>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=skill-filters-2"></script>
 </body>
 </html>

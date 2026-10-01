@@ -1225,6 +1225,10 @@ a {
     margin: 0 auto 34px;
 }
 
+.skill-filter-nav {
+    margin: 0 auto 28px;
+}
+
 .project-filters {
     display: flex;
     flex-wrap: wrap;
@@ -1257,6 +1261,25 @@ a {
     color: rgba(255, 255, 255, 0.58);
     font-size: 0.78rem;
     text-align: center;
+}
+
+.skill-filter-nav .filter-button {
+    border-color: rgba(0, 0, 0, 0.2);
+    color: rgba(0, 0, 0, 0.68);
+}
+
+.skill-filter-nav .filter-button:hover,
+.skill-filter-nav .filter-button.active {
+    border-color: var(--blue);
+    color: var(--white);
+}
+
+.skill-filter-nav .filter-count {
+    color: rgba(0, 0, 0, 0.56);
+}
+
+.skill-item[hidden] {
+    display: none !important;
 }
 
 .projects-grid {

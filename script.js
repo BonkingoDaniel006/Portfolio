@@ -17,12 +17,22 @@ document.addEventListener('DOMContentLoaded', async function() {
 
     const navToggle = document.querySelector('.nav-toggle');
     const navLinks = document.querySelector('.nav-links');
-    const filterRoot = document.querySelector('.project-nav');
+    const projectFilterRoot = document.querySelector('.project-nav');
     const projectCards = Array.from(document.querySelectorAll('.projects-grid .project-card'));
-    const filterChoices = [
+    const skillFilterRoot = document.querySelector('.skill-filter-nav');
+    const skillCards = Array.from(document.querySelectorAll('.skills-grid-new .skill-item'));
+    const projectFilterChoices = [
         { label: 'Tous', value: 'all' },
         { label: 'Web & desktop', value: 'web-desktop' },
         { label: 'IoT', value: 'iot' }
+    ];
+    const skillFilterChoices = [
+        { label: 'Toutes', value: 'all' },
+        { label: 'Front', value: 'front' },
+        { label: 'Back', value: 'back' },
+        { label: 'BDD', value: 'bdd' },
+        { label: 'DevOps', value: 'devops' },
+        { label: 'IoT & embarqué', value: 'iot' }
     ];
 
     navToggle.addEventListener('click', () => {
@@ -37,35 +47,39 @@ document.addEventListener('DOMContentLoaded', async function() {
         });
     });
 
-    function matchesFilter(card, filter) {
+    function matchesProjectFilter(card, filter) {
         const category = card.dataset.category;
         return filter === 'all' ||
             (filter === 'web-desktop' && ['web', 'desktop'].includes(category)) ||
             (filter === 'iot' && category === 'iot');
     }
 
-    function renderFallbackFilters() {
+    function matchesSkillFilter(skill, filter) {
+        return filter === 'all' || skill.dataset.category === filter;
+    }
+
+    function renderFallbackFilters(root, items, choices, matchesFilter, noun) {
         let activeFilter = 'all';
         const group = document.createElement('div');
         group.className = 'project-filters';
         group.setAttribute('role', 'group');
-        group.setAttribute('aria-label', 'Filtrer les projets');
+        group.setAttribute('aria-label', root.getAttribute('aria-label'));
         const count = document.createElement('p');
         count.className = 'filter-count';
         count.setAttribute('aria-live', 'polite');
 
         function updateFilters() {
-            const visibleCount = projectCards.filter(card => matchesFilter(card, activeFilter)).length;
-            projectCards.forEach(card => { card.hidden = !matchesFilter(card, activeFilter); });
+            const visibleCount = items.filter(item => matchesFilter(item, activeFilter)).length;
+            items.forEach(item => { item.hidden = !matchesFilter(item, activeFilter); });
             group.querySelectorAll('button').forEach(button => {
                 const isActive = button.dataset.filter === activeFilter;
                 button.classList.toggle('active', isActive);
                 button.setAttribute('aria-pressed', String(isActive));
             });
-            count.textContent = `${visibleCount} projet${visibleCount > 1 ? 's' : ''}`;
+            count.textContent = `${visibleCount} ${noun}`;
         }
 
-        filterChoices.forEach(choice => {
+        choices.forEach(choice => {
             const button = document.createElement('button');
             button.type = 'button';
             button.className = 'filter-button';
@@ -78,25 +92,25 @@ document.addEventListener('DOMContentLoaded', async function() {
             group.appendChild(button);
         });
 
-        filterRoot.replaceChildren(group, count);
+        root.replaceChildren(group, count);
         updateFilters();
     }
 
     function mountReactFilters() {
-        function ProjectFilters() {
+        function Filters({ items, choices, matchesFilter, noun, groupLabel }) {
             const [activeFilter, setActiveFilter] = React.useState('all');
-            const visibleCount = projectCards.filter(card => matchesFilter(card, activeFilter)).length;
+            const visibleCount = items.filter(item => matchesFilter(item, activeFilter)).length;
 
             React.useEffect(() => {
-                projectCards.forEach(card => { card.hidden = !matchesFilter(card, activeFilter); });
-            }, [activeFilter]);
+                items.forEach(item => { item.hidden = !matchesFilter(item, activeFilter); });
+            }, [items, matchesFilter, activeFilter]);
 
             return React.createElement(React.Fragment, null,
                 React.createElement('div', {
                     className: 'project-filters',
                     role: 'group',
-                    'aria-label': 'Filtrer les projets'
-                }, filterChoices.map(choice => React.createElement('button', {
+                    'aria-label': groupLabel
+                }, choices.map(choice => React.createElement('button', {
                     key: choice.value,
                     type: 'button',
                     className: `filter-button${activeFilter === choice.value ? ' active' : ''}`,
@@ -104,11 +118,28 @@ document.addEventListener('DOMContentLoaded', async function() {
                     onClick: () => setActiveFilter(choice.value)
                 }, choice.label))),
                 React.createElement('p', { className: 'filter-count', 'aria-live': 'polite' },
-                    `${visibleCount} projet${visibleCount > 1 ? 's' : ''}`)
+                    `${visibleCount} ${noun}`)
             );
         }
 
-        ReactDOM.createRoot(filterRoot).render(React.createElement(ProjectFilters));
+        if (projectFilterRoot && projectCards.length) {
+            ReactDOM.createRoot(projectFilterRoot).render(React.createElement(Filters, {
+                items: projectCards,
+                choices: projectFilterChoices,
+                matchesFilter: matchesProjectFilter,
+                noun: 'projets',
+                groupLabel: 'Filtrer les projets'
+            }));
+        }
+        if (skillFilterRoot && skillCards.length) {
+            ReactDOM.createRoot(skillFilterRoot).render(React.createElement(Filters, {
+                items: skillCards,
+                choices: skillFilterChoices,
+                matchesFilter: matchesSkillFilter,
+                noun: 'compétences',
+                groupLabel: 'Filtrer les compétences'
+            }));
+        }
     }
 
     function loadScript(url) {
@@ -121,11 +152,18 @@ document.addEventListener('DOMContentLoaded', async function() {
         });
     }
 
-    if (filterRoot && projectCards.length) {
+    if (projectCards.length || skillCards.length) {
         loadScript('https://unpkg.com/react@18/umd/react.production.min.js')
             .then(() => loadScript('https://unpkg.com/react-dom@18/umd/react-dom.production.min.js'))
             .then(mountReactFilters)
-            .catch(renderFallbackFilters);
+            .catch(() => {
+                if (projectFilterRoot && projectCards.length) {
+                    renderFallbackFilters(projectFilterRoot, projectCards, projectFilterChoices, matchesProjectFilter, 'projets');
+                }
+                if (skillFilterRoot && skillCards.length) {
+                    renderFallbackFilters(skillFilterRoot, skillCards, skillFilterChoices, matchesSkillFilter, 'compétences');
+                }
+            });
     }
 
     const modal = document.getElementById('project-modal');
